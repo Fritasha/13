@@ -1,0 +1,13 @@
+tickets = int(input('Введите количество билетов, которые хотите приобрести:'))
+cost_all = 0
+for i in range(tickets):
+    age = int(input('Введите возраст посетителя:'))
+    if 0 < age < 18:
+        cost_all = cost_all + 0
+    elif 18 <= age < 25:
+        cost_all = cost_all + 990
+    elif 25 <= age:
+        cost_all = cost_all + 1390
+if tickets > 3:
+        cost_all = cost_all * 0.9
+print('ИТОГО:', str(cost_all), 'рублей' )
